@@ -1,0 +1,348 @@
+/* ============ GLOBAL STYLES ============ */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+/* ============ NAVBAR ============ */
+.nav {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============ HEADER & FOOTER ============ */
+header,
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ============ MAIN CONTENT ============ */
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.top-controls input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.top-controls select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ============ LAYOUT GRID ============ */
+.content-area {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  height: fit-content;
+}
+
+.filter-section {
+  margin-top: 10px;
+}
+
+.filter-header {
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #444;
+  padding: 8px 0;
+}
+
+.filter-options {
+  margin: 5px 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.unselect-btn {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px 6px;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+/* ============ PRODUCT GRID ============ */
+.products-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.out-of-stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #222;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-actions button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-actions button:hover {
+  background: #0056b3;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* For tablets */
+@media (max-width: 992px) {
+  .content-area {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .products-grid {
+    order: 1;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* For mobile */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+
+  .nav {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .filter-header {
+    font-size: 14px;
+  }
+
+  .product-actions button {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+.contact-page {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-info {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #444;
+  font-size: 16px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-info {
+    font-size: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 10px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contact-form {
+    gap: 8px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
+

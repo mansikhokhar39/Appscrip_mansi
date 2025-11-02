@@ -1,0 +1,35 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f8f9fa;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column; /* stack selects vertically */
+    align-items: center;
+  }
+
+  select {
+    width: 80%; /* make selects full width on mobile */
+    margin-bottom: 10px;
+  }
+}
